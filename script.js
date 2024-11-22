@@ -239,34 +239,3 @@ function toggleFunction() {
   click = !click;
 }
 // Chart.js for the performance graph
-document.addEventListener("DOMContentLoaded", () => {
-  const ctx = document.getElementById("performance-chart").getContext("2d");
-
-  new Chart(ctx, {
-    type: "bar",
-    data: {
-      labels: ["Accuracy", "Speed", "Completion"],
-      datasets: [
-        {
-          label: "Performance Metrics (%)",
-          data: [85, 75, 90],
-          backgroundColor: ["#42a5f5", "#1e88e5", "#0d47a1"],
-        },
-      ],
-    },
-    options: {
-      responsive: true,
-      plugins: {
-        legend: {
-          display: false,
-        },
-      },
-      scales: {
-        y: {
-          beginAtZero: true,
-          max: 100,
-        },
-      },
-    },
-  });
-});
